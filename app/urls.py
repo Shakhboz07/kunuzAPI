@@ -14,8 +14,6 @@ router.register('region', RegionModelViewSet, basename='region')
 router.register('blog', BlogModelViewSet, basename='blog')
 
 urlpatterns = [
-
-
     path('token', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('refresh-token', TokenRefreshView.as_view(), name='token_refresh'),
     path('', include(router.urls)),
