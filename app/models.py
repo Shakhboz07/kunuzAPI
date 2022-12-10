@@ -1,3 +1,4 @@
+from django.contrib.postgres.fields import ArrayField
 from django.db.models import Model, SlugField, CharField, TextField, DateTimeField, \
     ImageField, ForeignKey, CASCADE, SET_NULL
 from django.utils.text import slugify
@@ -8,6 +9,7 @@ from django.utils.text import slugify
 class Category(Model):
     name = CharField(max_length=200)
     slug = SlugField(max_length=255, unique=True)
+    tag = ArrayField(CharField(max_length=255), null=True)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -22,6 +24,7 @@ class Category(Model):
 class Region(Model):
     name = CharField(max_length=255)
     slug = SlugField(max_length=255, unique=True)
+    tag = ArrayField(CharField(max_length=255), null=True)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -41,6 +44,7 @@ class Blog(Model):
     image = ImageField(upload_to='category/images/')
     text = TextField()
     slug = SlugField(max_length=255, unique=True)
+    tag = ArrayField(CharField(max_length=255), null=True)
 
     created_at = DateTimeField(auto_now=True)
     update_at = DateTimeField(auto_now_add=True)

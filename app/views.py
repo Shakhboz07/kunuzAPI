@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django_filters import rest_framework as filters
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
 
@@ -7,7 +7,6 @@ from app.serializers import CategoryModelSerializer, RegionModelSerializer, Blog
 
 
 # Create your views here.
-
 
 class CategoryModelViewSet(ModelViewSet):
     queryset = Category.objects.all()
@@ -23,3 +22,9 @@ class RegionModelViewSet(ModelViewSet):
 class BlogModelViewSet(ModelViewSet):
     queryset = Blog.objects.all()
     serializer_class = BlogModelSerializer
+
+
+class ProductFilter(filters.FilterSet):
+    class Meta:
+        model = Blog
+        fields = ('category', 'region')
