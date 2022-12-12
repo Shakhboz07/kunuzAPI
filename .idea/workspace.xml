@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54eefe4b-358e-4765-826e-d84da83d1648" name="Changes" comment="commit">
+    <list default="true" id="54eefe4b-358e-4765-826e-d84da83d1648" name="Changes" comment="add filter">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ff608e9d-d0c9-405c-ad30-25a52d8f8fbf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ff608e9d-d0c9-405c-ad30-25a52d8f8fbf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ff608e9d-d0c9-405c-ad30-25a52d8f8fbf/storage_v2/_src_/database/kunuzapi.kZe1Wg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ff608e9d-d0c9-405c-ad30-25a52d8f8fbf/storage_v2/_src_/database/kunuzapi.kZe1Wg/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0002_blog_slug.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/root/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/root/settings.py" afterDir="false" />
@@ -34,21 +38,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/shaxboz/PycharmProjects/kunuzAPI&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.django.DjangoModulesConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/shaxboz/PycharmProjects/kunuzAPI",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.django.DjangoModulesConfigurable"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="kunuzAPI" type="Python.DjangoServer" factoryName="Django server">
       <module name="kunuzAPI" />
@@ -94,7 +98,10 @@
       <workItem from="1670579814471" duration="219000" />
       <workItem from="1670580683339" duration="316000" />
       <workItem from="1670581351621" duration="5260000" />
-      <workItem from="1670680838285" duration="6353000" />
+      <workItem from="1670680838285" duration="7000000" />
+      <workItem from="1670752304815" duration="2070000" />
+      <workItem from="1670826625832" duration="3853000" />
+      <workItem from="1670866972338" duration="1072000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1669890679377</created>
@@ -103,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669890679377</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add filter">
+      <created>1670691706295</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670691706295</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +136,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="add filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="add filter" />
   </component>
 </project>

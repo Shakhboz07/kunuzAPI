@@ -9,7 +9,7 @@ from django.utils.text import slugify
 class Category(Model):
     name = CharField(max_length=200)
     slug = SlugField(max_length=255, unique=True)
-    tag = ArrayField(CharField(max_length=255), null=True)
+    tag = ArrayField(CharField(max_length=255), null=True, blank=True)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -24,7 +24,7 @@ class Category(Model):
 class Region(Model):
     name = CharField(max_length=255)
     slug = SlugField(max_length=255, unique=True)
-    tag = ArrayField(CharField(max_length=255), null=True)
+    tag = ArrayField(CharField(max_length=255), null=True, blank=True)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -38,13 +38,14 @@ class Region(Model):
 
 class Blog(Model):
     author = ForeignKey('auth.User', CASCADE)
+    category = ForeignKey('app.Category', CASCADE)
     region = ForeignKey('app.Region', SET_NULL, null=True)
     title = CharField(max_length=255)
     descriptions = CharField(max_length=255)
     image = ImageField(upload_to='category/images/')
     text = TextField()
     slug = SlugField(max_length=255, unique=True)
-    tag = ArrayField(CharField(max_length=255), null=True)
+    tag = ArrayField(CharField(max_length=255), null=True, blank=True)
 
     created_at = DateTimeField(auto_now=True)
     update_at = DateTimeField(auto_now_add=True)
