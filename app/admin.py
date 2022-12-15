@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from app.models import Blog, Category, Region
+from app.models import Blog, Category, Region, Tag
 
 
 # Register your models here.
@@ -18,4 +18,9 @@ class RegionModelAdmin(admin.ModelAdmin):
 
 @admin.register(Blog)
 class BlogModelAdmin(admin.ModelAdmin):
+    exclude = ('slug',)
+
+
+@admin.register(Tag)
+class TagModelAdmin(admin.ModelAdmin):
     exclude = ('slug',)

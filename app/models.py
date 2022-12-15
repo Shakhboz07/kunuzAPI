@@ -1,63 +1,54 @@
-from django.contrib.postgres.fields import ArrayField
-from django.db.models import Model, SlugField, CharField, TextField, DateTimeField, \
-    ImageField, ForeignKey, CASCADE, SET_NULL
-from django.utils.text import slugify
+import uuid
 
-
-# Create your models here.
-
-class Category(Model):
-    name = CharField(max_length=200)
-    slug = SlugField(max_length=255, unique=True)
-    tag = ArrayField(CharField(max_length=255), null=True, blank=True)
-
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
-        while Category.objects.filter(slug=self.slug).exists():
-            self.slug += self.slug + '1'
-        super().save(*args, **kwargs)
-
-    def __str__(self):
-        return self.name
+from ckeditor_uploader.fields import RichTextUploadingField
+from django.db.models import Model, ForeignKey, CharField, ImageField, UUIDField, CASCADE, ManyToManyField
 
 
 class Region(Model):
-    name = CharField(max_length=255)
-    slug = SlugField(max_length=255, unique=True)
-    tag = ArrayField(CharField(max_length=255), null=True, blank=True)
-
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
-        while Region.objects.filter(slug=self.slug).exists():
-            self.slug += self.slug + '1'
-        super().save(*args, **kwargs)
+    id = UUIDField(primary_key=True, unique=True, default=uuid.uuid4, editable=False)
+    name = CharField(max_length=55)
 
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = 'Viloyat'
+        verbose_name_plural = 'Viloyatlar'
 
-class Blog(Model):
-    author = ForeignKey('auth.User', CASCADE)
-    category = ForeignKey('app.Category', CASCADE)
-    region = ForeignKey('app.Region', SET_NULL, null=True)
-    title = CharField(max_length=255)
-    descriptions = CharField(max_length=255)
-    image = ImageField(upload_to='category/images/')
-    text = TextField()
-    slug = SlugField(max_length=255, unique=True)
-    tag = ArrayField(CharField(max_length=255), null=True, blank=True)
 
-    created_at = DateTimeField(auto_now=True)
-    update_at = DateTimeField(auto_now_add=True)
+class Category(Model):
+    id = UUIDField(primary_key=True, unique=True, default=uuid.uuid4, editable=False)
+    name = CharField(max_length=55)
 
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
-        while Blog.objects.filter(slug=self.slug).exists():
-            self.slug += self.slug + '1'
-        super().save(*args, **kwargs)
+    def __str__(self):
+        return self.name
 
     class Meta:
-        ordering = ['-created_at']
+        verbose_name = "Bo'lim"
+        verbose_name_plural = "Bo'limlar"
+
+
+class Tag(Model):
+    id = UUIDField(primary_key=True, unique=True, default=uuid.uuid4, editable=False)
+    name = CharField(max_length=125)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Hashtag'
+        verbose_name_plural = 'Hashtaglar'
+
+
+class Blog(Model):
+    id = UUIDField(primary_key=True, unique=True, default=uuid.uuid4, editable=False)
+    title = CharField(max_length=55)
+    text = RichTextUploadingField()
+    image = ImageField(upload_to='blogs/%Y/%m/%d')
+    category = ForeignKey('app.Category', CASCADE)
+    region = ForeignKey('app.Region', CASCADE, null=True, blank=True)
+    author = ForeignKey('auth.User', CASCADE)
+    tag = ManyToManyField('app.Tag')
 
     def __str__(self):
         return self.title

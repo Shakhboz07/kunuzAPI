@@ -6,12 +6,13 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
-from app.views import CategoryModelViewSet, RegionModelViewSet, BlogModelViewSet
+from app.views import CategoryModelViewSet, RegionModelViewSet, BlogModelViewSet, TagModelViewSet
 
 router = DefaultRouter()
 router.register('category', CategoryModelViewSet, basename='category')
 router.register('region', RegionModelViewSet, basename='region')
 router.register('blog', BlogModelViewSet, basename='blog')
+router.register('tag', TagModelViewSet, basename='tag')
 
 urlpatterns = [
     path('token', TokenObtainPairView.as_view(), name='token_obtain_pair'),
