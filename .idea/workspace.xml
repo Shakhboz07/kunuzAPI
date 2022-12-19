@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54eefe4b-358e-4765-826e-d84da83d1648" name="Changes" comment="add Tests">
-      <change afterPath="$PROJECT_DIR$/tests/test_blog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_category.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ff608e9d-d0c9-405c-ad30-25a52d8f8fbf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ff608e9d-d0c9-405c-ad30-25a52d8f8fbf.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_blog.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +37,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/shaxboz/PycharmProjects/aboutPage&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/shaxboz/PycharmProjects/kunuzAPI&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.django.DjangoModulesConfigurable&quot;
   },
@@ -194,6 +192,8 @@
       <workItem from="1671109193292" duration="6995000" />
       <workItem from="1671266420704" duration="4603000" />
       <workItem from="1671346443979" duration="1305000" />
+      <workItem from="1671426955560" duration="138000" />
+      <workItem from="1671449633361" duration="1164000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1669890679377</created>
@@ -223,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671098908245</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add Tests">
+      <created>1671427038345</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671427038345</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,22 +252,6 @@
     <MESSAGE value="add filter" />
     <MESSAGE value="add Tests" />
     <option name="LAST_COMMIT_MESSAGE" value="add Tests" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_blog.py</url>
-          <line>38</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_blog.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/kunuzAPI$models.coverage" NAME="models Coverage Results" MODIFIED="1670945652237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />

@@ -1,7 +1,7 @@
 from uuid import UUID
 
 import pytest
-from django.urls import reverse_lazy, reverse
+from django.urls import reverse_lazy
 
 from app.models import Region
 
